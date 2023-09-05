@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Off Bulb</title>
+    <!-- Google Fonts -->
+    <link
+      href="bulbstyle.css"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="bulbstyle.css"/>
+    <style>
+    h1{
+        position: relative;
+        left: 650px;
+        margin-left: 200px;
+		margin-right: 700px;
+		border: 20px solid rgb(107, 105, 107);
+		background-color: rgb(180, 182, 179);
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Hope is being able to see that there is light despite all of the darkness</h1>
+    <div class="container">
+      <div class="bulb center">
+        <div class="inside center"></div>
+        <div class="lower center"></div>
+      </div>
+      <button id="btn" class="center">ON</button>
+    </div>
+   <script>
+    let btn = document.getElementById("btn");
+btn.addEventListener("click", () => {
+  if (btn.innerText == "ON") {
+    document.documentElement.style.cssText = "--light-color: #f8d11d";
+    btn.innerText = "OFF";
+  } else {
+    document.documentElement.style.cssText = "--light-color: #94b0ff";
+    btn.innerText = "ON";
+  }
+});
+   </script>
+  </body>
+</html>
